@@ -327,7 +327,7 @@
      - When a Web3Forms access key is set: the message is delivered straight
        to RECEIVER from any device (no mail app needed).
      - Without a key: falls back to opening the visitor's mail app via mailto. */
-  const RECEIVER = "pallavnewmail@gmail.com";
+  const RECEIVER = "pallavpradhan@pallav.site";
   const WEB3FORMS_ACCESS_KEY = "736245b2-f157-45d1-80b3-f4acaf3ffc90";
 
   const form = document.getElementById("contactForm");
