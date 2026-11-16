@@ -121,36 +121,6 @@
   );
   document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el));
 
-  /* ---------- Typing effect ---------- */
-  const typedEl = document.getElementById("typed");
-  const roles = [
-    "AI-Powered Credit Analyst",
-    "NET-JRF in Management",
-    "Credit Underwriter",
-    "Credit-Risk Data Specialist",
-    "ML-Driven Process Improver",
-    "M.Sc. Computer Science",
-  ];
-  if (typedEl) {
-    if (prefersReduced) {
-      typedEl.textContent = roles[0];
-    } else {
-      let ri = 0, ci = 0, deleting = false;
-      const tick = () => {
-        const word = roles[ri];
-        typedEl.textContent = word.slice(0, ci);
-        if (!deleting) {
-          if (ci < word.length) { ci++; setTimeout(tick, 70); }
-          else { deleting = true; setTimeout(tick, 1500); }
-        } else {
-          if (ci > 0) { ci--; setTimeout(tick, 40); }
-          else { deleting = false; ri = (ri + 1) % roles.length; setTimeout(tick, 350); }
-        }
-      };
-      tick();
-    }
-  }
-
   /* ---------- 3D tilt on cards ---------- */
   document.querySelectorAll("[data-tilt]").forEach((card) => {
     const max = 6;
