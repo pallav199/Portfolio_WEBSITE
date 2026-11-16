@@ -392,6 +392,8 @@ body.hovering .cursor-ring {
 .role-line {
   display: inline-block;
   min-height: 1.4em;
+  /* never wraps, so the line height is always exactly one line — zero layout shift */
+  white-space: nowrap;
 }
 .role-badge {
   font-size: 14px;
@@ -1316,11 +1318,13 @@ body.is-desktop .contact-lines a[data-contact] .c-ico {
 
 @media (max-width: 520px) {
   .hero-inner { padding: 104px 0 44px; }
+  .hero-sub { font-size: 17px; min-height: 58px; }
+  .role-line { font-size: 17px; }
+  .role-badge { font-size: 13px; }
   .hero-stats { grid-template-columns: 1fr; gap: 18px; }
   .stat-num { font-size: 30px; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { text-align: center; justify-content: center; }
-  .hero-sub { min-height: 34px; }
   .job-top { flex-direction: column; }
   .job-period { align-self: flex-start; }
   .cred-grid { grid-template-columns: 1fr; }
