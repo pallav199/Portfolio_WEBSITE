@@ -376,28 +376,37 @@ body.hovering .cursor-ring {
   vertical-align: middle;
 }
 
+/* Stacked layout with a reserved height so the typing animation
+   never pushes content below it (fixes the mobile layout shift) */
 .hero-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
   font-family: var(--font-display);
   font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 600;
-  min-height: 40px;
-  margin-bottom: 8px;
-}
-.hero-tag {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--muted);
+  min-height: 68px;
   margin-bottom: 18px;
-  letter-spacing: 0.02em;
 }
-.role-static { color: var(--muted); font-weight: 500; }
-.role-fixed {
+.role-line {
+  display: inline-block;
+  min-height: 1.4em;
+}
+.role-badge {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 5px 15px;
+  border-radius: 99px;
+  border: 1px solid rgba(20, 232, 164, 0.35);
+  white-space: nowrap;
   background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+.role-static { color: var(--muted); font-weight: 500; }
 .role-typed {
   background: var(--grad);
   -webkit-background-clip: text;
