@@ -202,7 +202,7 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(20,232,164,0.7)";
+        ctx.fillStyle = "rgba(45,212,191,0.7)";
         ctx.fill();
 
         for (let j = i + 1; j < pts.length; j++) {
@@ -213,7 +213,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = `rgba(91,124,250,${0.12 * (1 - d / linkDist)})`;
+            ctx.strokeStyle = `rgba(129,140,248,${0.12 * (1 - d / linkDist)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
