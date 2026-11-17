@@ -381,6 +381,7 @@ body.hovering .cursor-ring {
   line-height: 1.06;
   letter-spacing: -0.035em;
   margin-bottom: 20px;
+  white-space: nowrap; /* name + FMVA® never split across lines on any device */
 }
 .hero-title .hello {
   display: block;
@@ -1341,7 +1342,9 @@ body.is-desktop .contact-lines a[data-contact] .c-ico {
   .timeline-card { padding: 20px 18px; }
   .highlight { padding: 14px 16px; }
   .section-title { font-size: 27px; }
-  .hero-title { font-size: 40px; }
+  /* vw-based size: the title scales with the phone width so
+     "Pallav Pradhan, FMVA®" always fits on one line, any device */
+  .hero-title { font-size: clamp(20px, 8vw, 31px); }
   .contact-lines { gap: 12px; }
 }
 
