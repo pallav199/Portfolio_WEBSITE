@@ -1,0 +1,34 @@
+# Portfolio cache strategy (Hostinger / LiteSpeed)
+#
+# Problem solved: the phone kept running on a stale style.css because the
+# server was sending a 7-day cache-control header, and a Git redeploy did
+# not invalidate the browser's copy.
+#
+# Solution (two parts, both already in place):
+#   1. The HTML entry point is always revalidated (no-cache below), so every
+#      visit grabs the current index.html.
+#   2. That index.html references assets with a version tag (?v=N). Bumping
+#      the number each time CSS/JS changes is a fresh URL, so the browser
+#      must re-download it — cache or no cache.
+#
+# Net effect: no more hard-refresh needed to see updates.
+
+<IfModule mod_headers.c>
+  # Entry HTML — never serve a stale copy; revalidate with the server each time
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header set Pragma "no-cache"
+    Header unset ETag
+  </FilesMatch>
+
+  # Crawl files — keep them fresh so robots.txt / sitemap changes propagate
+  <FilesMatch "(robots\.txt|sitemap\.xml)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # Static assets — long-lived, but they are always versioned (?v=N) in the
+  # markup, so a new version number forces a fresh download regardless.
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
