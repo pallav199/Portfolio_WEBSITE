@@ -393,7 +393,7 @@ body.hovering .cursor-ring {
 }
 .hero-title .name { font-weight: 700; }
 .hero-title .cred {
-  font-size: 0.32em;
+  font-size: 0.42em;
   font-weight: 500;
   color: var(--muted);
   vertical-align: middle;
