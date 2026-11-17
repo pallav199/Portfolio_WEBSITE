@@ -923,7 +923,7 @@ body.is-desktop .contact-lines a[data-contact] .c-ico {
   align-items: center;
   gap: 38px;
   white-space: nowrap;
-  animation: marquee 28s linear infinite;
+  animation: marquee 18s linear infinite;
   will-change: transform;
   font-family: var(--font-display);
   font-size: 19px;
@@ -1358,7 +1358,7 @@ body.is-desktop .contact-lines a[data-contact] .c-ico {
   }
   /* the skills marquee is requested as a slide, so let it keep running */
   .marquee-track {
-    animation-duration: 28s !important;
+    animation-duration: 18s !important;
     animation-iteration-count: infinite !important;
   }
   [data-reveal] { opacity: 1; transform: none; filter: none; }
