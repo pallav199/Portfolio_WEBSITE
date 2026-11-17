@@ -229,21 +229,21 @@ body.hovering .cursor-ring {
 }
 .logo-mark {
   position: relative;
-  width: 42px; height: 42px;
-  border-radius: 50%;
+  width: 40px; height: 40px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
-  background: var(--grad);
-  padding: 2px;
-  box-shadow: 0 8px 24px -8px rgba(45, 212, 191, 0.5);
+  padding: 6px;
+  background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+  border: 1px solid var(--border-2);
+  box-shadow: 0 8px 24px -10px rgba(45, 212, 191, 0.45), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 .logo-mark img {
   position: relative;
   z-index: 1;
   width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center 15%;
-  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 .logo-text {
@@ -395,12 +395,24 @@ body.hovering .cursor-ring {
   white-space: nowrap; /* name + FMVA® never split across lines on any device */
 }
 .hero-title .hello {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 0.42em;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--muted);
   letter-spacing: 0;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+}
+.hero-photo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 2px solid rgba(45, 212, 191, 0.55);
+  box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.08);
+  flex: none;
 }
 .hero-title .name { font-weight: 700; }
 .hero-title .cred {
