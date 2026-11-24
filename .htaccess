@@ -13,6 +13,22 @@
 #
 # Net effect: no more hard-refresh needed to see updates.
 
+# ------------------------------------------------------------------
+# Force all www traffic to the apex domain (pallav.site).
+# Fixes the duplicate-host problem: www.pallav.site now 301-redirects
+# to https://pallav.site instead of serving the page a second time,
+# so link equity and indexing point to a single canonical host.
+# ------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # Consolidate to the single canonical host (https://pallav.site/).
+  # Catches www.* and http:// variants in one hop; apex-over-https passes through.
+  RewriteCond %{HTTP_HOST} ^www\.pallav\.site$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://pallav.site/%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 <IfModule mod_headers.c>
   # Entry HTML — never serve a stale copy; revalidate with the server each time
   <FilesMatch "\.(html|htm)$">

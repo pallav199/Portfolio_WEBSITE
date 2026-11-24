@@ -21,11 +21,11 @@
   <meta name="twitter:description" content="Pallav Pradhan applies AI and data science to credit risk and underwriting — helping banks lend safely in a fintech-driven world." />
   <meta name="twitter:image" content="https://pallav.site/photo.jpg" />
 
-  <link rel="icon" type="image/jpeg" href="photo.jpg" />
+  <link rel="icon" type="image/jpeg" href="photo-favicon.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 
   <!-- Person structured data (schema.org) -->
   <script type="application/ld+json">
@@ -123,7 +123,7 @@
       <div class="hero-left">
       <p class="visually-hidden">Pallav Pradhan is a credit analyst and underwriting professional who applies artificial intelligence and data science to credit risk, mortgage lending and AI-enabled banking processes.</p>
       <h1 class="hero-title reveal" data-reveal>
-        <span class="hello">Hi, I'm <img class="hero-photo" src="photo.jpg" alt="" aria-hidden="true" /></span>
+        <span class="hello">Hi, I'm <img class="hero-photo" src="photo-small.jpg" alt="" aria-hidden="true" loading="lazy" /></span>
         <span class="name">Pallav <span class="grad">Pradhan</span></span>
         <span class="cred">, FMVA®</span>
       </h1>
@@ -208,7 +208,7 @@
         <div class="about-card reveal" data-reveal>
           <div class="about-card-glow"></div>
           <div class="about-avatar">
-            <img src="photo.jpg" alt="Pallav Pradhan" class="about-photo" loading="lazy" />
+            <img src="photo-small.jpg" alt="Pallav Pradhan" class="about-photo" loading="lazy" />
             <span class="about-avatar-ring"></span>
           </div>
           <h3>Focus areas</h3>
@@ -422,6 +422,55 @@
         building toward — grounded in real credit work, not abstractions.
       </p>
 
+      <!-- Featured field note -->
+      <article class="field-note reveal" data-reveal>
+        <div class="field-note-head">
+          <span class="field-note-tag">Field Note · Fraud &amp; Risk</span>
+          <span class="field-note-reading">~5 min read</span>
+        </div>
+        <h3 class="field-note-title">Reading a ₹1.5&nbsp;crore loan the way a model does</h3>
+        <div class="field-note-body">
+          <p>
+            A home-loan proposal landed on my desk for roughly ₹1.5&nbsp;crore — a figure that, on its
+            own, already put the borrower well past the comfort zone of a single asset. The paperwork was
+            clean. The income documentation looked fine. A traditional scorecard would have leaned on the
+            three bureau numbers and called it good. That's exactly where I stopped trusting the paperwork
+            and started reading the cash flow instead.
+          </p>
+          <p>
+            The pattern I was looking for is what I call <em>circular transactions</em>: money moving between
+            a small set of linked accounts or parties in a loop, so that inflows look like income and outflows
+            look like spending, when in reality the same money is just going round and round. Individually,
+            every line is plausible. The fraud is in the <em>relationship between the lines</em> — and that's the
+            part a single bureau score will never see, because a score is a number, not a graph.
+          </p>
+          <p>
+            This is the core argument I keep making: <strong>credit risk is a graph problem, not a score
+            problem.</strong> A borrower isn't a FICO digit. They're a node connected to employers, other
+            lenders, fintech and BNPL accounts, guarantors, and sometimes to other applicants in the same
+            file. The risk lives in the edges — in the undisclosed liability here, the stacked obligation
+            there, the revenue that turns out to be the customer's own money coming back out the other end.
+            What a bureau tells you is a single coordinate. What cash-flow and transaction analysis tells you
+            is the shape of the whole neighbourhood.
+          </p>
+          <p>
+            The reason I'm so insistent on the "machine" in this is that this is precisely the work a model
+            does well and a human does badly: not making the final call, but <em>scanning hundreds of
+            transaction links for the loop that a tired, time-pressed analyst will miss.</strong> I didn't flag
+            this file with a black-box that spat out "fraud." I flagged it because the transaction graph
+            looked circular, I traced it by hand, and it was. The model's job is to make that tracing
+            systematic and fast — and to keep the bank honest with itself about where the real risk is,
+            before the money goes out the door.
+          </p>
+          <p>
+            The loan was treated differently because of what the cash flow actually showed, not because of
+            what a score suggested. That gap — between the number a scorecard produces and the picture the
+            transactions paint — is where most of the money that banks lose to "good paper" is hiding. My
+            work is to shrink that gap.
+          </p>
+        </div>
+      </article>
+
       <div class="insights-grid">
         <article class="insight-card reveal" data-reveal>
           <span class="insight-tag">Credit Scoring</span>
@@ -513,6 +562,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

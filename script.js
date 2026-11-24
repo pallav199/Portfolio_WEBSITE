@@ -157,9 +157,13 @@
     });
   }
 
-  /* ---------- Particle network ---------- */
+  /* ---------- Particle network ----------
+     Skipped on phones to keep the page fast (saves CPU/battery; the hero
+     still has the grid + glows). Runs on desktop where the GPU is free. */
+  const coarse = matchMedia("(pointer: coarse)").matches;
+  const smallScreen = Math.max(window.screen.width || 1024, window.screen.height || 1024) <= 1024;
   const canvas = document.getElementById("particles");
-  if (canvas) {
+  if (canvas && !(coarse && smallScreen)) {
     const ctx = canvas.getContext("2d");
     let W, H, pts = [], dpr = Math.min(window.devicePixelRatio || 1, 2);
     const resize = () => {
