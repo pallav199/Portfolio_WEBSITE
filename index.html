@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
 
   <!-- Person structured data (schema.org) -->
   <script type="application/ld+json">
@@ -105,7 +105,7 @@
         <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <a href="#experience" class="nav-link" data-section="experience">Experience</a>
         <a href="#education" class="nav-link" data-section="education">Education</a>
-        <a href="#insights" class="nav-link" data-section="insights">Insights</a>
+        <a href="/insights" class="nav-link" data-section="insights">Insights</a>
         <a href="#contact" class="nav-link" data-section="contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">Let's talk</a>
@@ -409,7 +409,7 @@
     </div>
   </section>
 
-  <!-- INSIGHTS -->
+  <!-- INSIGHTS (teaser — full writing lives at /insights) -->
   <section class="section" id="insights">
     <div class="container">
       <div class="section-head reveal" data-reveal>
@@ -418,94 +418,52 @@
       </div>
 
       <p class="insights-lede reveal" data-reveal>
-        I sit where banking meets machine learning. These are the ideas I'm writing about and
-        building toward — grounded in real credit work, not abstractions.
+        I sit where banking meets machine learning. Here's where I keep my thinking — each idea is a
+        full-length note I've written, grounded in real credit work, not abstractions.
       </p>
 
-      <!-- Featured field note -->
-      <article class="field-note reveal" data-reveal>
-        <div class="field-note-head">
-          <span class="field-note-tag">Field Note · Fraud &amp; Risk</span>
-          <span class="field-note-reading">~5 min read</span>
-        </div>
-        <h3 class="field-note-title">Reading a ₹1.5&nbsp;crore loan the way a model does</h3>
-        <div class="field-note-body">
-          <p>
-            A home-loan proposal landed on my desk for roughly ₹1.5&nbsp;crore — a figure that, on its
-            own, already put the borrower well past the comfort zone of a single asset. The paperwork was
-            clean. The income documentation looked fine. A traditional scorecard would have leaned on the
-            three bureau numbers and called it good. That's exactly where I stopped trusting the paperwork
-            and started reading the cash flow instead.
-          </p>
-          <p>
-            The pattern I was looking for is what I call <em>circular transactions</em>: money moving between
-            a small set of linked accounts or parties in a loop, so that inflows look like income and outflows
-            look like spending, when in reality the same money is just going round and round. Individually,
-            every line is plausible. The fraud is in the <em>relationship between the lines</em> — and that's the
-            part a single bureau score will never see, because a score is a number, not a graph.
-          </p>
-          <p>
-            This is the core argument I keep making: <strong>credit risk is a graph problem, not a score
-            problem.</strong> A borrower isn't a FICO digit. They're a node connected to employers, other
-            lenders, fintech and BNPL accounts, guarantors, and sometimes to other applicants in the same
-            file. The risk lives in the edges — in the undisclosed liability here, the stacked obligation
-            there, the revenue that turns out to be the customer's own money coming back out the other end.
-            What a bureau tells you is a single coordinate. What cash-flow and transaction analysis tells you
-            is the shape of the whole neighbourhood.
-          </p>
-          <p>
-            The reason I'm so insistent on the "machine" in this is that this is precisely the work a model
-            does well and a human does badly: not making the final call, but <em>scanning hundreds of
-            transaction links for the loop that a tired, time-pressed analyst will miss.</strong> I didn't flag
-            this file with a black-box that spat out "fraud." I flagged it because the transaction graph
-            looked circular, I traced it by hand, and it was. The model's job is to make that tracing
-            systematic and fast — and to keep the bank honest with itself about where the real risk is,
-            before the money goes out the door.
-          </p>
-          <p>
-            The loan was treated differently because of what the cash flow actually showed, not because of
-            what a score suggested. That gap — between the number a scorecard produces and the picture the
-            transactions paint — is where most of the money that banks lose to "good paper" is hiding. My
-            work is to shrink that gap.
-          </p>
-        </div>
-      </article>
-
       <div class="insights-grid">
-        <article class="insight-card reveal" data-reveal>
+        <a class="insight-card insight-link reveal" href="/insights/circular-transactions" data-reveal>
+          <span class="insight-tag">Field Note · Fraud &amp; Risk</span>
+          <h3>Reading a ₹1.5&nbsp;crore loan the way a model does</h3>
+          <p>The fraud is in the relationship between the lines, not any one of them. On circular transactions and why credit risk is a graph, not a score.</p>
+          <span class="insight-read">Read the note →</span>
+        </a>
+
+        <a class="insight-card insight-link reveal" href="/insights/ml-credit-scoring" data-reveal>
           <span class="insight-tag">Credit Scoring</span>
           <h3>Machine learning that survives the bureau gap</h3>
-          <p>Credit scoring shouldn't stop at three bureau numbers. Layering cash-flow, repayment behaviour and alternate data lets you underwrite the thin-file and fintech-borrower that legacy scorecards write off — without taking the risk on blind faith.</p>
-        </article>
+          <p>Layering cash-flow, repayment behaviour and alternate data to underwrite the thin-file and fintech borrower legacy scorecards write off.</p>
+          <span class="insight-read">Read the note →</span>
+        </a>
 
-        <article class="insight-card reveal" data-reveal>
+        <a class="insight-card insight-link reveal" href="/insights/detecting-credit-stacking" data-reveal>
           <span class="insight-tag">Fraud &amp; Risk</span>
-          <h3>AI-detecting credit-stacking before it blows up</h3>
-          <p>The fastest-growing liability is invisible one: stacked BNPL and fintech debt a borrower never discloses. Pattern detection on transaction and bureau signals can flag circular flows and undisclosed obligations early — I flagged a ₹1.5&nbsp;crore circular pattern that shaped a real lending decision.</p>
-        </article>
+          <h3>Detecting credit-stacking before it blows up</h3>
+          <p>Stacked BNPL and fintech debt a borrower never discloses — and how pattern detection flags circular flows and undisclosed obligations early.</p>
+          <span class="insight-read">Read the note →</span>
+        </a>
 
-        <article class="insight-card reveal" data-reveal>
+        <a class="insight-card insight-link reveal" href="/insights/responsible-lending" data-reveal>
           <span class="insight-tag">Responsible Lending</span>
           <h3>AI that lends safely, not just faster</h3>
-          <p>Speed and safety should never trade off. The goal is models that repay-borrowers to repay capacity — keeping affordability, explainability and audit-readiness built in, so a bank can defend every sanction in a regulator's eyes.</p>
-        </article>
+          <p>Speed and safety should never trade off. Keeping affordability, explainability and audit-readiness built into the model, not bolted on after.</p>
+          <span class="insight-read">Read the note →</span>
+        </a>
 
-        <article class="insight-card reveal" data-reveal>
+        <a class="insight-card insight-link reveal" href="/insights/human-in-the-loop" data-reveal>
           <span class="insight-tag">The Human Layer</span>
           <h3>Where the analyst still wins</h3>
-          <p>AI handles the volume; judgement handles the exception. The highest-value skill is reading the pattern a model half-sees and the context it can't — that's the underwriter's job, and it's the one a model can't replace.</p>
-        </article>
-      </div>
+          <p>AI handles the volume; judgement handles the exception. On the one thing a model can't replace.</p>
+          <span class="insight-read">Read the note →</span>
+        </a>
 
-      <div class="insights-follow reveal" data-reveal>
-        <p>
-          <strong>Following this thread?</strong> I share what I'm building — one idea at a time,
-          no hype. Follow on LinkedIn, or stay in touch below and I'll send the next one.
-        </p>
-        <div class="follow-actions">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/pallavpradhan" target="_blank" rel="noopener">Follow on LinkedIn</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
+        <a class="insight-card insight-link insights-more reveal" href="/insights" data-reveal>
+          <span class="insight-tag">All writing</span>
+          <h3>Every note, in one place</h3>
+          <p>One idea at a time, no hype. Browse the full series or follow along on LinkedIn.</p>
+          <span class="insight-read">Visit Insights →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -562,6 +520,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI that lends safely, not just faster | Pallav Pradhan</title>
+  <meta name="description" content="Speed and safety should never trade off. Pallav Pradhan on keeping affordability, explainability and audit-readiness built into credit models — not bolted on after the fact." />
+  <meta name="author" content="Pallav Pradhan" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pallav.site/insights/responsible-lending" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pallav Pradhan" />
+  <meta property="og:title" content="AI that lends safely, not just faster | Pallav Pradhan" />
+  <meta property="og:description" content="Keeping affordability, explainability and audit-readiness built into the model, not bolted on after." />
+  <meta property="og:url" content="https://pallav.site/insights/responsible-lending" />
+  <meta property="og:image" content="https://pallav.site/photo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AI that lends safely, not just faster | Pallav Pradhan" />
+  <meta name="twitter:description" content="Keeping affordability, explainability and audit-readiness built into the model, not bolted on after." />
+  <link rel="icon" type="image/jpeg" href="photo-favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=13" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI that lends safely, not just faster",
+    "description": "Keeping affordability, explainability and audit-readiness built into credit models, not bolted on after the fact.",
+    "image": "https://pallav.site/photo.jpg",
+    "author": { "@type": "Person", "name": "Pallav Pradhan", "url": "https://pallav.site/" },
+    "publisher": { "@type": "Organization", "name": "Pallav Pradhan", "logo": { "@type": "ImageObject", "url": "https://pallav.site/photo.jpg" } },
+    "mainEntityOfPage": "https://pallav.site/insights/responsible-lending",
+    "datePublished": "2026-11-19",
+    "dateModified": "2026-11-19"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="preloader" id="preloader"><div class="preloader-inner"><div class="preloader-ring"></div><span class="preloader-text">PP</span></div></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"><img src="logo-white.png" alt="Pallav Pradhan" /></span><span class="logo-text">Pallav<span class="logo-dot">.</span>Pradhan</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link" data-section="home">Home</a>
+        <a href="/#about" class="nav-link" data-section="about">About</a>
+        <a href="/#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="/#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="/#education" class="nav-link" data-section="education">Education</a>
+        <a href="/insights" class="nav-link active" data-section="insights">Insights</a>
+        <a href="/#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+      <a href="/#contact" class="btn btn-primary nav-cta">Let's talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </header>
+
+  <main class="article-page">
+    <div class="container">
+      <article class="article-hero">
+        <span class="article-tag">Responsible Lending</span>
+        <h1>AI that lends safely, not just faster</h1>
+        <div class="article-meta">
+          <img src="photo-small.jpg" alt="" />
+          <span>By <strong>Pallav Pradhan</strong> · ~4 min read</span>
+        </div>
+      </article>
+
+      <div class="article-body">
+        <p>
+          The most common framing for AI in lending is a speed story: faster decisions, fewer queues,
+          more volume through the funnel. That's real, and it matters. But it's the <em>cheap</em>
+          argument, and the one that quietly leads banks to optimise for throughput at the expense of
+          safety — which is precisely how you end up with a portfolio that grows fast and rots faster.
+        </p>
+        <p>
+          My rule is that <strong>speed and safety should never trade off</strong>, and that means
+          treating three things as first-class properties of the model, not compliance checkboxes you add
+          at the end: <em>affordability</em> — does the repayment actually fit the cash flow once the
+          undisclosed obligations are in; <em>explainability</em> — can I tell the customer, and the
+          regulator, <em>why</em> this decision in one or two sentences; and <em>audit-readiness</em> —
+          can a year from now, a stranger reconstruct exactly what the model saw and what it decided?
+        </p>
+
+        <div class="article-quote">
+          “If you can't explain the decision in one sentence to the borrower, you don't have a lending
+          model. You have a coin flip with extra steps.”
+        </div>
+
+        <h2>Why this is a model-design choice, not a legal one</h2>
+        <p>
+          A bank can absolutely build a model that clears every regulatory bar and still be the wrong
+          tool — because a decision it can't explain, or a limit it sets a customer can't afford, is a
+          liability with a polite label on it. The responsible version is one where the “reason code” is
+          designed in, not scraped off later. That's a small difference in engineering and a huge
+          difference in outcome: it's the difference between a bank that can defend every sanction in a
+          regulator's eyes, and one that can defend the average.
+        </p>
+        <p>
+          For the customer, it's even simpler. A fast yes is a good thing; a fast yes that turns out to be
+          unaffordable is a bad thing, and it costs more than the time you saved. That's the line I try to
+          hold — the model should make the safe decision fast, not just make a decision fast.
+        </p>
+      </div>
+
+      <nav class="article-nav">
+        <a class="an-home" href="/insights/detecting-credit-stacking"><span class="an-label">← Previous</span><span class="an-title">Detecting credit-stacking before it blows up</span></a>
+        <a class="an-next" href="/insights/human-in-the-loop"><span class="an-label">Next →</span><span class="an-title">Where the analyst still wins</span></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Pallav Pradhan</span>
+      <span class="footer-mid">Built by Pallav Pradhan</span>
+      <a href="/">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=13"></script>
+</body>
+</html>

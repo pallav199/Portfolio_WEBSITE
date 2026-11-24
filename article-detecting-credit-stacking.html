@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detecting credit-stacking before it blows up | Pallav Pradhan</title>
+  <meta name="description" content="The fastest-growing liability in retail credit is the one a borrower never discloses: stacked BNPL and fintech debt. Pallav Pradhan on how pattern detection flags circular flows and undisclosed obligations early." />
+  <meta name="author" content="Pallav Pradhan" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pallav.site/insights/detecting-credit-stacking" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pallav Pradhan" />
+  <meta property="og:title" content="Detecting credit-stacking before it blows up | Pallav Pradhan" />
+  <meta property="og:description" content="The fastest-growing liability is the one a borrower never discloses." />
+  <meta property="og:url" content="https://pallav.site/insights/detecting-credit-stacking" />
+  <meta property="og:image" content="https://pallav.site/photo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Detecting credit-stacking before it blows up | Pallav Pradhan" />
+  <meta name="twitter:description" content="The fastest-growing liability is the one a borrower never discloses." />
+  <link rel="icon" type="image/jpeg" href="photo-favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=13" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Detecting credit-stacking before it blows up",
+    "description": "How pattern detection flags circular flows and undisclosed obligations early — stacked BNPL and fintech debt a borrower never discloses.",
+    "image": "https://pallav.site/photo.jpg",
+    "author": { "@type": "Person", "name": "Pallav Pradhan", "url": "https://pallav.site/" },
+    "publisher": { "@type": "Organization", "name": "Pallav Pradhan", "logo": { "@type": "ImageObject", "url": "https://pallav.site/photo.jpg" } },
+    "mainEntityOfPage": "https://pallav.site/insights/detecting-credit-stacking",
+    "datePublished": "2026-11-19",
+    "dateModified": "2026-11-19"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="preloader" id="preloader"><div class="preloader-inner"><div class="preloader-ring"></div><span class="preloader-text">PP</span></div></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"><img src="logo-white.png" alt="Pallav Pradhan" /></span><span class="logo-text">Pallav<span class="logo-dot">.</span>Pradhan</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link" data-section="home">Home</a>
+        <a href="/#about" class="nav-link" data-section="about">About</a>
+        <a href="/#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="/#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="/#education" class="nav-link" data-section="education">Education</a>
+        <a href="/insights" class="nav-link active" data-section="insights">Insights</a>
+        <a href="/#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+      <a href="/#contact" class="btn btn-primary nav-cta">Let's talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </header>
+
+  <main class="article-page">
+    <div class="container">
+      <article class="article-hero">
+        <span class="article-tag">Fraud &amp; Risk</span>
+        <h1>Detecting credit-stacking before it blows up</h1>
+        <div class="article-meta">
+          <img src="photo-small.jpg" alt="" />
+          <span>By <strong>Pallav Pradhan</strong> · ~4 min read</span>
+        </div>
+      </article>
+
+      <div class="article-body">
+        <p>
+          The fastest-growing liability in retail credit is the one a borrower never lists on the
+          application. It isn't a single big debt — it's <em>credit-stacking</em>: five small BNPL
+          instalments, three fintech micro-loans, a couple of instant-paylater balances, none of them
+          individually scary, all of them quietly compounding into an obligation that no single line on the
+          form reveals. On paper the file looks fine. In reality the borrower is already over-levered
+          before your loan lands.
+        </p>
+        <p>
+          This is a data problem first and a judgement problem second, which is exactly why it's where a
+          model earns its keep. The tell-tale signals are scattered and unglamorous: a spike in micro-lender
+          enquiries in the bureau pull, repayment behaviour that's slipping across apps at the same time,
+          utilisation ratios that don't match the income, and — the one I rely on most — transaction
+          patterns that loop back on themselves. A model trained to read that combination can flag the
+          stack early, while a human scanning the same file under deadline will usually only see the
+          application the borrower chose to show.
+        </p>
+
+        <div class="article-quote">
+          “The risk isn't in any one small debt. It's in the sum of the small debts nobody told you about.”
+        </div>
+
+        <h2>What we do about the flag</h2>
+        <p>
+          Detection is only half the job. A useful system tells the underwriter <em>what</em> to look at
+          and <em>why</em> it's worried — “elevated BNPL utilisation across three lenders, last 60 days” —
+          rather than just a red dot. That's what makes it a tool instead of a black box: the analyst keeps
+          the decision, and the model just makes the invisible obligation visible. That's the whole point,
+          and it's the difference between catching the stack early and learning about it in the default
+          reports a year later.
+        </p>
+      </div>
+
+      <nav class="article-nav">
+        <a class="an-home" href="/insights/ml-credit-scoring"><span class="an-label">← Previous</span><span class="an-title">Machine learning that survives the bureau gap</span></a>
+        <a class="an-next" href="/insights/responsible-lending"><span class="an-label">Next →</span><span class="an-title">AI that lends safely, not just faster</span></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Pallav Pradhan</span>
+      <span class="footer-mid">Built by Pallav Pradhan</span>
+      <a href="/">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=13"></script>
+</body>
+</html>

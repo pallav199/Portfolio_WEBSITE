@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading a ₹1.5 crore loan the way a model does | Pallav Pradhan</title>
+  <meta name="description" content="On circular transactions and why credit risk is a graph problem, not a score problem. Pallav Pradhan explains how he flagged a ₹1.5 crore home-loan pattern that a traditional scorecard would have missed." />
+  <meta name="author" content="Pallav Pradhan" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pallav.site/insights/circular-transactions" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pallav Pradhan" />
+  <meta property="og:title" content="Reading a ₹1.5 crore loan the way a model does | Pallav Pradhan" />
+  <meta property="og:description" content="On circular transactions and why credit risk is a graph problem, not a score problem." />
+  <meta property="og:url" content="https://pallav.site/insights/circular-transactions" />
+  <meta property="og:image" content="https://pallav.site/photo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reading a ₹1.5 crore loan the way a model does | Pallav Pradhan" />
+  <meta name="twitter:description" content="On circular transactions and why credit risk is a graph problem, not a score problem." />
+  <link rel="icon" type="image/jpeg" href="photo-favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=13" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Reading a ₹1.5 crore loan the way a model does",
+    "description": "On circular transactions and why credit risk is a graph problem, not a score problem.",
+    "image": "https://pallav.site/photo.jpg",
+    "author": { "@type": "Person", "name": "Pallav Pradhan", "url": "https://pallav.site/" },
+    "publisher": { "@type": "Organization", "name": "Pallav Pradhan", "logo": { "@type": "ImageObject", "url": "https://pallav.site/photo.jpg" } },
+    "mainEntityOfPage": "https://pallav.site/insights/circular-transactions",
+    "datePublished": "2026-11-19",
+    "dateModified": "2026-11-19"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="preloader" id="preloader"><div class="preloader-inner"><div class="preloader-ring"></div><span class="preloader-text">PP</span></div></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"><img src="logo-white.png" alt="Pallav Pradhan" /></span><span class="logo-text">Pallav<span class="logo-dot">.</span>Pradhan</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link" data-section="home">Home</a>
+        <a href="/#about" class="nav-link" data-section="about">About</a>
+        <a href="/#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="/#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="/#education" class="nav-link" data-section="education">Education</a>
+        <a href="/insights" class="nav-link active" data-section="insights">Insights</a>
+        <a href="/#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+      <a href="/#contact" class="btn btn-primary nav-cta">Let's talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </header>
+
+  <main class="article-page">
+    <div class="container">
+      <article class="article-hero" itemscope itemtype="https://schema.org/Article">
+        <span class="article-tag">Fraud &amp; Risk · Field Note</span>
+        <h1>Reading a ₹1.5&nbsp;crore loan the way a model does</h1>
+        <div class="article-meta">
+          <img src="photo-small.jpg" alt="" />
+          <span>By <strong>Pallav Pradhan</strong> · ~5 min read</span>
+        </div>
+      </article>
+
+      <div class="article-body">
+        <p>
+          A home-loan proposal landed on my desk for roughly ₹1.5&nbsp;crore — a figure that, on its
+          own, already put the borrower well past the comfort zone of a single asset. The paperwork was
+          clean. The income documentation looked fine. A traditional scorecard would have leaned on the
+          three bureau numbers and called it good. That's exactly where I stopped trusting the paperwork
+          and started reading the cash flow instead.
+        </p>
+        <p>
+          The pattern I was looking for is what I call <em>circular transactions</em>: money moving between
+          a small set of linked accounts or parties in a loop, so that inflows look like income and outflows
+          look like spending, when in reality the same money is just going round and round. Individually,
+          every line is plausible. The fraud is in the <em>relationship between the lines</em> — and that's the
+          part a single bureau score will never see, because a score is a number, not a graph.
+        </p>
+
+        <div class="article-quote">
+          “Credit risk is a graph problem, not a score problem. A score is a single coordinate; cash flow
+          is the shape of the whole neighbourhood.”
+        </div>
+
+        <h2>Why the scorecard is the wrong instrument</h2>
+        <p>
+          This is the core argument I keep making: <strong>credit risk is a graph problem, not a score
+          problem.</strong> A borrower isn't a FICO digit. They're a node connected to employers, other
+          lenders, fintech and BNPL accounts, guarantors, and sometimes to other applicants in the same
+          file. The risk lives in the edges — in the undisclosed liability here, the stacked obligation
+          there, the revenue that turns out to be the customer's own money coming back out the other end.
+          What a bureau tells you is a single coordinate. What cash-flow and transaction analysis tells you
+          is the shape of the whole neighbourhood.
+        </p>
+
+        <h2>What the model is actually doing</h2>
+        <p>
+          The reason I'm so insistent on the “machine” in this is that this is precisely the work a model
+          does well and a human does badly: not making the final call, but <em>scanning hundreds of
+          transaction links for the loop that a tired, time-pressed analyst will miss.</em> I didn't flag
+          this file with a black-box that spat out “fraud.” I flagged it because the transaction graph
+          looked circular, I traced it by hand, and it was. The model's job is to make that tracing
+          systematic and fast — and to keep the bank honest with itself about where the real risk is,
+          before the money goes out the door.
+        </p>
+
+        <h2>The gap where the money is lost</h2>
+        <p>
+          The loan was treated differently because of what the cash flow actually showed, not because of
+          what a score suggested. That gap — between the number a scorecard produces and the picture the
+          transactions paint — is where most of the money that banks lose to “good paper” is hiding. My
+          work is to shrink that gap.
+        </p>
+        <p>
+          A model doesn't replace that judgement. It removes the blind spot: it sees the loop you would have
+          missed under deadline, and it does it on every file, not just the ones that happen to feel off.
+          That's the entire value proposition of bringing machine learning to credit — not a faster yes or no,
+          but a sharper “what am I actually seeing here?”
+        </p>
+      </div>
+
+      <nav class="article-nav">
+        <a class="an-home" href="/insights"><span class="an-label">← All</span><span class="an-title">Back to Insights</span></a>
+        <a class="an-next" href="/insights/ml-credit-scoring"><span class="an-label">Next →</span><span class="an-title">Machine learning that survives the bureau gap</span></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Pallav Pradhan</span>
+      <span class="footer-mid">Built by Pallav Pradhan</span>
+      <a href="/">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=13"></script>
+</body>
+</html>

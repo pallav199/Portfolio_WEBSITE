@@ -27,6 +27,16 @@
   RewriteCond %{HTTP_HOST} ^www\.pallav\.site$ [NC,OR]
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://pallav.site/%{REQUEST_URI} [R=301,L]
+
+  # ------------------------------------------------------------------
+  # Clean URLs for the multi-page Insights section.
+  # /insights            ->  insights.html
+  # /insights/<slug>     ->  article-<slug>.html
+  # Internal rewrites only; the browser bar keeps the clean URL so it's
+  # indexable and shareable, while static assets are untouched.
+  # ------------------------------------------------------------------
+  RewriteRule ^insights$ insights.html [L]
+  RewriteRule ^insights/([a-z0-9-]+)$ article-$1.html [L]
 </IfModule>
 
 <IfModule mod_headers.c>

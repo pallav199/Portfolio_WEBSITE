@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machine learning that survives the bureau gap | Pallav Pradhan</title>
+  <meta name="description" content="Credit scoring shouldn't stop at three bureau numbers. Pallav Pradhan on layering cash-flow, repayment behaviour and alternate data to underwrite the thin-file and fintech borrower that legacy scorecards write off — without taking risk on blind faith." />
+  <meta name="author" content="Pallav Pradhan" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pallav.site/insights/ml-credit-scoring" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pallav Pradhan" />
+  <meta property="og:title" content="Machine learning that survives the bureau gap | Pallav Pradhan" />
+  <meta property="og:description" content="Underwriting the thin-file and fintech borrower legacy scorecards write off — without blind faith." />
+  <meta property="og:url" content="https://pallav.site/insights/ml-credit-scoring" />
+  <meta property="og:image" content="https://pallav.site/photo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Machine learning that survives the bureau gap | Pallav Pradhan" />
+  <meta name="twitter:description" content="Underwriting the thin-file and fintech borrower legacy scorecards write off — without blind faith." />
+  <link rel="icon" type="image/jpeg" href="photo-favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=13" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Machine learning that survives the bureau gap",
+    "description": "Layering cash-flow, repayment behaviour and alternate data to underwrite the thin-file and fintech borrower legacy scorecards write off.",
+    "image": "https://pallav.site/photo.jpg",
+    "author": { "@type": "Person", "name": "Pallav Pradhan", "url": "https://pallav.site/" },
+    "publisher": { "@type": "Organization", "name": "Pallav Pradhan", "logo": { "@type": "ImageObject", "url": "https://pallav.site/photo.jpg" } },
+    "mainEntityOfPage": "https://pallav.site/insights/ml-credit-scoring",
+    "datePublished": "2026-11-19",
+    "dateModified": "2026-11-19"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="preloader" id="preloader"><div class="preloader-inner"><div class="preloader-ring"></div><span class="preloader-text">PP</span></div></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="logo-mark"><img src="logo-white.png" alt="Pallav Pradhan" /></span><span class="logo-text">Pallav<span class="logo-dot">.</span>Pradhan</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link" data-section="home">Home</a>
+        <a href="/#about" class="nav-link" data-section="about">About</a>
+        <a href="/#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="/#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="/#education" class="nav-link" data-section="education">Education</a>
+        <a href="/insights" class="nav-link active" data-section="insights">Insights</a>
+        <a href="/#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+      <a href="/#contact" class="btn btn-primary nav-cta">Let's talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </header>
+
+  <main class="article-page">
+    <div class="container">
+      <article class="article-hero">
+        <span class="article-tag">Credit Scoring</span>
+        <h1>Machine learning that survives the bureau gap</h1>
+        <div class="article-meta">
+          <img src="photo-small.jpg" alt="" />
+          <span>By <strong>Pallav Pradhan</strong> · ~4 min read</span>
+        </div>
+      </article>
+
+      <div class="article-body">
+        <p>
+          The most common failure in retail credit isn't a model that's too clever — it's a model built
+          on data that doesn't exist for the people who need it most. A “thin-file” borrower, a fresh
+          fintech customer, a self-employed applicant with no clean credit line: the bureau returns
+          almost nothing, so the legacy scorecard returns a coin flip. And the bank, told there's no
+          signal, usually says no.
+        </p>
+        <p>
+          That's exactly the gap machine learning is good at closing. The insight is that the bureau is
+          one <em>source</em> of information, not the information itself. A borrower's real story is spread
+          across their bank cash flows, how they actually repay (on time, barely, always short), their
+          utilisation of credit, their behaviour across the fintech apps they already use, and — crucially —
+          whether those obligations add up to something the application never disclosed.
+        </p>
+
+        <div class="article-quote">
+          “The bureau is one source of information, not the information. A model's job is to bring the
+          other sources to the table and let them argue with the score.”
+        </div>
+
+        <h2>What I mean by “surviving” the gap</h2>
+        <p>
+          A good underwriting model shouldn't <em>ignore</em> a missing bureau report — it should
+          <em>re-weight</em> what it does know. If the bureau is empty, the model leans harder on
+          verified repayment behaviour and cash-flow stability, and it knows its own confidence is lower,
+          so it asks for less, not more, on that single decision. The discipline that separates this from
+          “data science” cosplay is that the model carries a calibrated uncertainty: it knows the
+          difference between “this person is risky” and “I can't tell, so I'm hedging.”
+        </p>
+        <p>
+          Get that calibration right and you unlock the entire thin-file segment without taking the risk
+          on blind faith — which is the whole point. The model doesn't pretend to know more than it does.
+          It just stops pretending the bureau was the only place to look.
+        </p>
+      </div>
+
+      <nav class="article-nav">
+        <a class="an-home" href="/insights/circular-transactions"><span class="an-label">← Previous</span><span class="an-title">Reading a ₹1.5 crore loan the way a model does</span></a>
+        <a class="an-next" href="/insights/detecting-credit-stacking"><span class="an-label">Next →</span><span class="an-title">Detecting credit-stacking before it blows up</span></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Pallav Pradhan</span>
+      <span class="footer-mid">Built by Pallav Pradhan</span>
+      <a href="/">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=13"></script>
+</body>
+</html>
